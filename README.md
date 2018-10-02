@@ -1,6 +1,6 @@
 # README
 
-I am building an app to en ecommerce site here. I will add more information about it here soon.
+I am building an app for my e-commerce site here. I will add more information about it here soon.
 
 Things you may want to cover:
 
