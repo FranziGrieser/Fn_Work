@@ -1,7 +1,6 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+I am building an app to en ecommerce site here. I will add more information about it here soon.
 
 Things you may want to cover:
 
