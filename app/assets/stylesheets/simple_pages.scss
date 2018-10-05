@@ -25,12 +25,12 @@ p {
   padding-left: 10px;
 }
 
-.nav-link {
+.nav-item {
   font-family: "Syncopate", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
   padding-left: 10px;
   float: right;
-  color: #009E8D;
-  text-decoration: none;
+  color: #009E8D !important;
+  text-decoration: none !important;
 }
 
 .navbar-light {
@@ -46,7 +46,7 @@ p {
 }
 
 #contactdetails {
-  padding-bottom: 200px;
+  padding-bottom: 180px;
 }
 
 .site-footer {
