@@ -28,9 +28,15 @@ p {
 .nav-item {
   font-family: "Syncopate", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
   padding-left: 10px;
-  float: right;
-  color: #009E8D !important;
-  text-decoration: none !important;
+}
+
+a {
+  color: #009E8D;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+  color: black;
 }
 
 .navbar-light {
