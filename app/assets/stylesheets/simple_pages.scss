@@ -37,7 +37,17 @@ p {
   background-color: #e3f2fd !important;
 }
 
-#contactdetails {text-align: center;}
+.img-responsive { padding-bottom: 10px; }
+
+.contact {
+  background-image: url("bikecon.jpg"); /* background image*/
+  background-size: cover; /*entire div section*/
+  height: 100%;
+}
+
+#contactdetails {
+  padding-bottom: 200px;
+}
 
 .site-footer {
   background-color: #e3f2fd;
