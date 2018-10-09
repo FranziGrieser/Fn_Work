@@ -14,7 +14,7 @@ header {
   margin-top: 65px;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: "Signika Negative", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
   color: #009E8D;
   text-align: center;
@@ -58,6 +58,21 @@ a:hover {
 #contactdetails {
   padding-bottom: 180px;
 }
+
+#product_frame {
+  border: solid 2px #009E8D;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+#product_frame p {
+  padding-top: 5px;
+}
+
+#product_name {
+  text-transform: uppercase;
+  padding-top: 10px;
+ }
 
 .site-footer {
   background-color: #e3f2fd;
