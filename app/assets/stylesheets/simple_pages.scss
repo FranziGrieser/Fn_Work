@@ -3,6 +3,10 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
+  display: flex;
+  min-height: 100vh;
+  margin: 0 auto;
+  flex-direction: column;
   font-family: "Signika Negative", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
 }
 
@@ -36,7 +40,6 @@ a {
 }
 a:hover {
   text-decoration: none;
-  color: black;
 }
 
 .navbar-light {
@@ -60,4 +63,7 @@ a:hover {
   text-align: center;
 }
 
-.container { padding-top: 60px; }
+.container {
+  min-height: 100px;
+  flex: 1;
+  padding-top: 60px; }
