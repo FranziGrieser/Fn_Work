@@ -39,8 +39,9 @@ a {
   text-decoration: none;
 }
 a:hover {
+  color: #009E8D;
   text-decoration: none;
-  background-color: #009E8D;
+  background-color: transparent;
 }
 
 .navbar-light {
@@ -73,6 +74,11 @@ a:hover {
   text-transform: uppercase;
   padding-top: 10px;
  }
+
+.btn-light {
+  background-color: #e3f2fd;
+  border-color: #e3f2fd;
+}
 
 .site-footer {
   background-color: #e3f2fd;
