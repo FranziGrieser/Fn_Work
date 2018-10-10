@@ -1,3 +1,27 @@
 // Place all the styles related to the products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#product_frame {
+  border: solid 2px #009E8D;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+#product_frame p {
+  padding-top: 5px;
+}
+
+#productname {
+  text-transform: uppercase;
+  padding-top: 10px;
+ }
+
+textarea {
+  resize: none;
+}
+
+.field { text-align: center; }
+
+.actions { text-align: center; }

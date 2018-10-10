@@ -14,31 +14,31 @@
 
     <div class="field">
       <%= form.label :name %>
-      <%= form.text_field :name %>
+      <%= form.text_field :name %><br><br>
     </div>
 
     <div class="field">
       <%= form.label :description %>
-      <%= form.text_area :description %>
+      <%= form.text_area :description %><br><br>
     </div>
 
     <div class="field">
       <%= form.label :image_url %>
-      <%= form.text_field :image_url %>
+      <%= form.text_field :image_url %><br><br>
     </div>
 
     <div class="field">
-      <%= form.label :color %><br>
-      <%= form.text_field :color %>
+      <%= form.label :color %>
+      <%= form.text_field :color %><br><br>
     </div>
 
     <div class="field">
-      <%= form.label :price %><br>
-      <%= form.text_field :price %>
+      <%= form.label :price %>
+      <%= form.text_field :price %> $<br><br>
     </div>
 
     <div class="actions">
-      <%= form.submit %>
+      <%= form.submit(class: "btn btn-light")%>
     </div>
   <% end %>
 

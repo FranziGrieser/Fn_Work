@@ -8,6 +8,7 @@ body {
   margin: 0 auto;
   flex-direction: column;
   font-family: "Signika Negative", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  background-color: #F3F9FA;
 }
 
 header {
@@ -49,31 +50,6 @@ a:hover {
 }
 
 .img-responsive { padding-bottom: 10px; }
-
-.contact {
-  background-image: url("bikecon.jpg"); /* background image*/
-  background-size: cover; /*entire div section*/
-  height: 100%;
-}
-
-#contactdetails {
-  padding-bottom: 180px;
-}
-
-#product_frame {
-  border: solid 2px #009E8D;
-  border-radius: 5px;
-  margin: 10px;
-}
-
-#product_frame p {
-  padding-top: 5px;
-}
-
-#product_name {
-  text-transform: uppercase;
-  padding-top: 10px;
- }
 
 .btn-light {
   background-color: #e3f2fd;
