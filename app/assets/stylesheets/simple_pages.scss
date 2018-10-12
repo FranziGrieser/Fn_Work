@@ -24,8 +24,8 @@ h1, h2, h3 {
 p {
   padding-left: 20px;
   padding-top: 20px;
-  font-size: 1.25em;
-  line-height: 25px;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 .navbar-collapse {
@@ -67,4 +67,18 @@ a:hover {
 .container {
   min-height: 100px;
   flex: 1;
-  padding-top: 30px; }
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+
+.back {
+  background-color: white;
+  box-shadow: 5px 5px 10px 0;
+  padding-bottom: 20px;
+}
+
+//* About  **//
+
+.intro {
+  padding: 20px;
+}

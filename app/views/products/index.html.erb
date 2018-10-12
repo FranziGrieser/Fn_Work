@@ -1,10 +1,10 @@
 <p id="notice"><%= notice %></p>
-
-<header class="container">
+<section class="container back">
+<header>
   <h1>Products</h1>
 </header>
 
-<div class="container">
+<div>
   <div class="row">
     <% @products.each do |product| %>
       <%= render product %>
@@ -17,3 +17,5 @@
 </div><!-- /container-->
 
   <br>
+
+</section>

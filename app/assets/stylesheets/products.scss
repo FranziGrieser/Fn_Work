@@ -4,9 +4,9 @@
 
 
 #product_frame {
-  border: solid 2px #009E8D;
+  border: solid 1px #009E8D;
   border-radius: 5px;
-  margin: 10px;
+  margin: 20px 30px 20px 45px;
 }
 
 #product_frame p {
@@ -22,6 +22,9 @@ textarea {
   resize: none;
 }
 
-.field { text-align: center; }
+.field {
+  text-align: center;
+  font-size: 18px;
+ }
 
 .actions { text-align: center; }

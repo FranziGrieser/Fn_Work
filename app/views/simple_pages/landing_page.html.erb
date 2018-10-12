@@ -1,36 +1,12 @@
-<section class="container">
+<section class="container back">
   <header>
-  <h1>BikeBerlin - Get to Know Our Newcomers</h1>
+  <h1>Get to Know Our Newcomers</h1>
   </header>
-  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-    </ol>
-<!-- wraper for slides -->
-    <div class="carousel-inner">
-      <% @products.each do |product| %>
-        <div class="carousel-item<%= " active" if product == @products.first %>">
-          <%= image_tag(product.image_url, class: "img-responsive container") %>
+  <p>Walking is to slow for you, we can change that! We set up an impressive collection
+    of our bikes for you to choose your new favorite. Check out our Newcomers and fall in love
+    with your new bike.
+  </p>
 
-          <div class="carousel-caption">
-            <%= product.name %>
-          </div>
-        </div>
-      <% end %>
-    </div><!-- /carousel-inner-->
-
-<!-- controls -->
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-
+  <%= render 'simple_pages/carousel' %>
 
 </section>
