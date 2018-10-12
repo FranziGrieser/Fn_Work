@@ -1,3 +1,11 @@
 <section class="container">
-
+ <header>
+   <h2>Your Order Information</h2>
+ </header>
+  <p>
+    <strong>Order ID: </strong><%= @order.id %><br>
+    <strong>Product Name: </strong><%= @order.product.name %><br>
+    <strong>Product Price: </strong><%= number_to_currency(@order.product.price/100.to_f) %><br>
+    <strong>Total Price: </strong><%= number_to_currency(@order.total/100.to_f) %>
+  </p>
 </section>
