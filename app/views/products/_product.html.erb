@@ -1,0 +1,9 @@
+
+<div class="col-sm-6 col-md-6 col-lg-4" id="product_frame">
+  <a href="#"><h3 id="productname"><%= product.name %></h3></a>
+  <%= image_tag(product.image_url, class: "img-fluid") unless product.image_url.nil? %>
+  <p><%= product.description %></p>
+  <p><%= product.color %></p><hr>
+  <p><strong><%= product.price %> $</strong></p>
+  <p><%= link_to 'Show', product %> | <%= link_to 'Edit', edit_product_path(product) %> | <%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+</div><!-- /col -->
