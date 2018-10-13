@@ -78,8 +78,29 @@ a:hover {
   padding-bottom: 20px;
 }
 
-//* About  **//
+//* About  *//
 
 .intro {
   padding: 20px;
+}
+
+//* Carousel *//
+
+.carousel-caption {
+  position: absolute;
+  height: 12%;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.carousel-indicators {
+  height: 5%;
+}
+
+.carousel-indicators li {
+  position: relative;
+  border-radius: 100%;
+  width: 10px;
+  height: 10px;
+  margin-right: 10px;
 }
