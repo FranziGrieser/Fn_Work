@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 <section class="container back">
 <header>
-  <h1>Products</h1>
+  <h1>Products </h1>
 </header>
 
 <div>
@@ -11,9 +11,10 @@
     <% end %>
   </div> <!-- /row-->
   <br><br>
-  <div class="btn btn-light">
-    <%= link_to 'New Product', new_product_path %>
-  </div>
+    <%= link_to new_product_path, class: "btn btn-light" do %>
+      <i class="glyphicon glyphicon-plus"></i> New Product
+    <% end %>
+
 </div><!-- /container-->
 
   <br>

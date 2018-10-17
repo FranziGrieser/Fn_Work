@@ -1,11 +1,21 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
   <a class="navbar-brand" href="/simple_pages/index"><i class="fas fa-bicycle"></i><i class="far fa-heart"></i> <b>BikeBerlin</b></a>
+
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+          <div class="form-group">
+            <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+                <%= form.text_field :q, id: 'q', value: params[:q], class: "search_field form-control", placeholder: "Search for..." %>
+                <%= form.submit 'Search', class: "btn btn-light btn-xs form-control" %>
+                    <i class="glyphicon glyphicon-search"></i>
+            <% end %>
+          </div>
+      </li>
       <li class="nav-item active">
         <%= link_to "Home", simple_pages_index_path %> <span class="sr-only">(current)</span>
       </li>
@@ -13,14 +23,15 @@
         <%= link_to "About", simple_pages_about_path %>
       </li>
       <li class="nav-item">
-      <%= link_to "Contact", simple_pages_contact_path %>
+        <%= link_to "Contact", simple_pages_contact_path %>
       </li>
       <li class="nav-item">
-      <%= link_to "Products", root_path %>
-    </li>
-    <li class="nav-item">
-    <%= link_to "Orders", orders_path %>
-  </li>
+        <%= link_to "Products", root_path %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Orders", orders_path %>
+      </li>
+
     </ul>
   </div>
 </nav>
