@@ -1,10 +1,19 @@
 <table>
-  <tbody>
+  <tbody style="font-family: Arial, sans-serif; font-size: 18px; max-width: 800px; ">
     <tr>
-      <td><p>You have received a new contact form message. The contents of the message are:</p></td>
+      <td style="font-size: 20px;"><p><strong>Hello Admin,</strong></p>
+      </td>
     </tr>
     <tr>
-      <td><p><%= @message %></p></td>
+      <td><p>You have received a new contact form message. The content of the
+        message is the following:</o>
+    </tr>
+    <tr>
+      <td style="border: 2px solid green; text-align: center;"><p><%= @message %></p></td>
+    </tr>
+    <tr>
+      <td><p>What's next?<br>
+        Reach out to the client to answer the request!</p></td>
     </tr>
   </tbody>
 </table>

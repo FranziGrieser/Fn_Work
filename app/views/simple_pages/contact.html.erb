@@ -1,13 +1,29 @@
-
 <section class="container back">
+
   <header>
     <h1>Contact us</h1>
   </header>
   <div class="row">
     <p>We are happy to help if you have any further questions, just leave us a message.</p>
     <div class="col-md-6 col-sm-12">
-      <%= render 'simple_pages/contact-form' %>
-    </div>
+      <%= flash[:notice] %>
+      <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
+        <div class="field form-group">
+              <%= form.label :name %>
+            <%= form.text_field :name, size: 30, class: "create_input", placeholder: "Enter Your Name" %><br>
+        </div>
+        <div class="field form-group">
+            <%= form.label :email %>
+            <%= form.text_field :email, size: 30, class: "create_input", placeholder: "Enter Your Email" %><br>
+        </div>
+        <div class="field form-group">
+            <%= form.label :message %>
+            <%= form.text_field :message, size: 30, rows: 10, class: "create_input", placeholder: "Enter Your Message" %><br><br>
+        </div>
+        <div class="actions">
+          <%= form.submit "Send", class: "btn btn-light form_label" %>
+          <% end %>
+        </div>    </div>
     <div class="col-md-6 col-sm-12">
       <div>
       <p>Or you can call us:<br> <i class="fas fa-phone-square"><br></i> 030 12345 234<br><br>
@@ -16,6 +32,6 @@
       </p>
     </div><!-- /adress-->
   </div>
-
   </div><!-- /row-->
+
 </section>
