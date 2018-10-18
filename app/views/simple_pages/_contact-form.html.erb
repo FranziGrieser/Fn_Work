@@ -1,25 +1,19 @@
   <%= flash[:notice] %>
 
   <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
-  <div class="row">
     <div class="field form-group">
-      <div class="col-sm-12 col-md">
-        <%= form.label :name %>
-        <%= form.text_field :name, size: 30, class: "form-control", placeholder: "Enter Your Name" %>
-      </div>
+          <%= form.label :name %>
+        <%= form.text_field :name, size: 30, class: "create_input", placeholder: "Enter Your Name" %><br>
     </div>
     <div class="field form-group">
-      <div class="col-sm-12 col-md">
         <%= form.label :email %>
-        <%= form.text_field :email, size: 30, class: "form-control", placeholder: "Enter Your Email" %>
-      </div>
+        <%= form.text_field :email, size: 30, class: "create_input", placeholder: "Enter Your Email" %><br>
     </div>
     <div class="field form-group">
-      <div class="col-sm-12 col-md">
         <%= form.label :message %>
-        <%= form.text_field :message, class: "form-control", placeholder: "Enter Your Message", rows: 10 %>
-      </div>
+        <%= form.text_field :message, size: 30, rows: 10, class: "create_input", placeholder: "Enter Your Message" %><br><br>
     </div>
-  </div>
-  <%= form.submit "Send", class: "btn btn-light form_label" %>
-  <% end %>
+    <div class="actions">
+      <%= form.submit "Send", class: "btn btn-light form_label" %>
+      <% end %>
+    </div>

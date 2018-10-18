@@ -3,12 +3,19 @@
   <header>
     <h1>Contact us</h1>
   </header>
-  <p>We are happy to help if you have any further questions.</p>
+  <div class="row">
+    <p>We are happy to help if you have any further questions, just leave us a message.</p>
+    <div class="col-md-6 col-sm-12">
+      <%= render 'simple_pages/contact-form' %>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <div>
+      <p>Or you can call us:<br> <i class="fas fa-phone-square"><br></i> 030 12345 234<br><br>
+        We are all into getting to know what exactally you are looking for <br>- so come along:<br>
+        <i class="fas fa-broadcast-tower"></i> Alexanderplatz 44, 444444 Berlin
+      </p>
+    </div><!-- /adress-->
+  </div>
 
-  <%= render 'simple_pages/contact-form' %>
-
-  <p>Our your can call us:<br> <i class="fas fa-phone-square"><br></i> 030 12345 234<br><br>
-    We are all into getting to know what exactally you are looking for <br>- so come along:<br>
-    <i class="fas fa-broadcast-tower"></i> Alexanderplatz 44, 444444 Berlin
-  </p>
+  </div><!-- /row-->
 </section>
