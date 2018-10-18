@@ -18,6 +18,9 @@
   padding-top: 10px;
  }
 
+.form-group { text-align: center; }
+
+.control-label { text-align: center; }
 
 .field {
   text-align: center;
@@ -26,7 +29,8 @@
 
 .create_input {
   border-radius: 5px;
-  text-align: center;
+  border: solid 1px #d5d5d5;
+  text-align: left;
   padding: 5px;
 }
 

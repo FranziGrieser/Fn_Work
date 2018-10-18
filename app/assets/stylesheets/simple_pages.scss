@@ -12,11 +12,10 @@ body {
 }
 
 header {
-  margin-top: 65px;
+  margin-top: 50px;
 }
 
-h1, h2, h3 {
-  font-family: "Signika Negative", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+h1, h2, h3, h4, h5 {
   color: #009E8D;
   text-align: center;
  }
@@ -26,7 +25,7 @@ p {
   font-size: 18px;
   line-height: 1.6;
 }
-
+//* Navbar *//
 .navbar-collapse {
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
   padding-left: 10px;
@@ -34,9 +33,44 @@ p {
 
 .nav-item {
   font-family: "Syncopate", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  padding-top: 12px;
   padding-left: 10px;
 }
 
+.navbar-light {
+  background-color: #e3f2fd !important;
+}
+
+.search {
+  padding-top: 8px;
+}
+
+.search_field {
+  padding: 5px;
+  border-radius: 5px;
+  border: solid 1px #d5d5d5;
+}
+
+//* Buttons *//
+/* Navbar-Button btn-xs btn-primary */
+.btn-xs {
+  padding: 4px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #009E8D;
+  border-color: #009E8D;
+}
+
+/* New Product/ Update Product */
+.btn-light {
+  background-color: #e3f2fd;
+  border-color: #e3f2fd;
+}
+
+//* Links *//
 a {
   color: #009E8D;
   text-decoration: none;
@@ -48,48 +82,23 @@ a:hover {
   background-color: transparent;
 }
 
-.navbar-light {
-  background-color: #e3f2fd !important;
-}
-
 .img-responsive { padding-bottom: 10px; }
 
-.btn-light {
-  background-color: #e3f2fd;
-  border-color: #e3f2fd;
-}
-
-.search_field {
-  padding: 5px;
-  border-radius: 5px;
-}
-
-.site-footer {
-  background-color: #e3f2fd;
-  text-align: center;
-}
-
+//* container style and background *//
 .container {
   min-height: 100px;
   flex: 1;
-  margin-top: 60px;
+  margin-top: 65px;
   margin-bottom: 20px;
 }
 
 .back {
   background-color: white;
-  box-shadow: 5px 5px 10px 0;
+  box-shadow: 5px 5px 5px 0;
   padding-bottom: 20px;
 }
 
-//* About  *//
-
-.intro {
-  padding: 20px;
-}
-
-//* Carousel *//
-
+//* Carousel  Newcomers *//
 .carousel-caption {
   position: absolute;
   height: 12%;
@@ -107,4 +116,10 @@ a:hover {
   width: 10px;
   height: 10px;
   margin-right: 10px;
+}
+
+//* Footer *//
+.site-footer {
+  background-color: #e3f2fd;
+  text-align: center;
 }
