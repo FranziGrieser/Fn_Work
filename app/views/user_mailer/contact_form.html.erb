@@ -1,19 +1,37 @@
 <table>
-  <tbody style="font-family: Arial, sans-serif; font-size: 18px; max-width: 800px; ">
+  <tbody style="font-family: Arial, sans-serif; font-size: 18px; max-width: 800px;
+    align: center; border-collapse: collapse;">
     <tr>
-      <td style="font-size: 20px;"><p><strong>Hello Admin,</strong></p>
+      <td style="background-color: #e3f2fd; padding: 10px; ">
+        <img><%= image_tag("icon.png") %><b>BikeBerlin</b>
       </td>
     </tr>
     <tr>
-      <td><p>You have received a new contact form message. The content of the
-        message is the following:</o>
+      <td style="padding: 20px 10px 20px 10px; background-color: #fffeea;">
+        <table style="background-color: white;" width="100%">
+          <tr>
+            <td style="font-size: 20px; padding-left: 5px; padding-right: 5px;">
+              <p><strong>Hello Admin,</strong></p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding-left: 5px; padding-right: 5px;">
+              <p>You have received a new contact form message. The content of the
+              message is the following:</p>
+              <p style="text-align: center;"><q><i><%= @message %></i></q></p>
+              <p>What's next?<br>
+              Reach out to the client to answer the request!</p>
+            </td>
+          </tr>
+        </table>
+      </td>
     </tr>
     <tr>
-      <td style="border: 2px solid green; text-align: center;"><p><%= @message %></p></td>
+      <td  style="background-color: #e3f2fd; padding: 10px; text-align: center; ">
+        &copy; 2018 BikeBerlin
+      </td>
     </tr>
-    <tr>
-      <td><p>What's next?<br>
-        Reach out to the client to answer the request!</p></td>
-    </tr>
+
+
   </tbody>
 </table>
