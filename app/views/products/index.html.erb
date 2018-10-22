@@ -1,18 +1,17 @@
 <p id="notice"><%= notice %></p>
+
 <section class="container back">
   <header>
-    <h1>Products </h1>
+    <h1>Products</h1>
   </header>
 
   <div>
     <div class="row">
-      <% @products.each do |product| %>
-        <%= render product %>
-      <% end %>
+        <%= render @products %>
     </div> <!-- /row-->
     <br><br>
     <%= link_to new_product_path, class: "btn btn-light" do %>
-      <i class="fas fa-plus"></i> New Product 
+      <i class="fas fa-plus"></i> New Product
     <% end %>
   <br>
 </div>
