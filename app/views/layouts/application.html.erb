@@ -19,10 +19,14 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
     <%= render 'layouts/nav' %>
 
+    <% if notice %>
+      <p id="notice" class="container back alert alert-primary" role="alert"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p id="alert" class="container back alert alert-danger" role="alert"><%= alert %></p>
+    <% end %>
 
     <%= yield %>
 

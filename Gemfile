@@ -25,6 +25,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # provides user authentication functions for Rails
 gem 'devise'
+# Authorization gem by Ryan Bates
+gem 'cancancan', '~> 2.2'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
