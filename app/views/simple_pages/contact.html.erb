@@ -18,7 +18,7 @@
         </div>
         <div class="field form-group">
             <%= form.label :message %>
-            <%= form.text_field :message, size: 30, rows: 10, class: "create_input", placeholder: "Enter Your Message" %><br><br>
+            <%= form.text_area :message, cols: 30, rows: 10, class: "create_input", placeholder: "Enter Your Message" %><br><br>
         </div>
         <div class="actions">
           <%= form.submit "Send", class: "btn btn-light form_label" %>
