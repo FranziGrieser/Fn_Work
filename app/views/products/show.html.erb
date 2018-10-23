@@ -1,31 +1,44 @@
 <p id="notice"><%= notice %></p>
 
-
 <section class="container back">
-<p>
-  <strong>Name:</strong>
-  <%= @product.name %>
-</p>
+  <header>
+    <h3><%= @product.name %></h3>
+  </header>
+  <div class="row">
+    <div class="col-sm col-md-6">
+      <p>
+        <%= image_tag(@product.image_url, class: "img-fluid") %>
+      </p>
+    </div> <!-- /col image-->
+    <div class="col-sm col-md-6">
 
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
+      <p><strong>Description:</strong><br>
+        <%= @product.description %><br><br>
+        <strong>Color:</strong><br>
+        <%= @product.color %><br><br>
+        <strong>Price:</strong><br>
+        <%= @product.price %> $<br><br>
+        <strong>Highest Review: </strong>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i><br>
+        <i><q><%= @product.highest_rating_comment %></q></i>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @product.image_url %>
-</p>
-
-<p>
-  <strong>Color:</strong>
-  <%= @product.color %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
+      </p>
+    </div> <!-- /col text-->
+    <div class="col-sm col-md-6">
+      <p><strong>Product Reviews:</strong>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i>
+        <i class="far fa-star"></i><br>
+        <i><q>Here comes the text of my review</q></i>
+      </p>
+    </div>
+  </div> <!-- /row-->
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %><br><br>
