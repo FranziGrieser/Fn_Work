@@ -17,7 +17,7 @@
   text-transform: uppercase;
   padding-top: 10px;
  }
- 
+
 /////* Products Form *////
 .control-label { text-align: center; }
 
@@ -41,3 +41,31 @@
 }
 
 .actions { text-align: center; }
+
+/******* Pagination ****/
+.pagination {
+  text-align: center;
+  padding: 1em;
+  cursor: default;
+}
+.pagination a, .pagination span {
+  padding: 0.2em 0.3em;
+}
+
+.pagination .disabled {
+ }
+
+.pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  text-shadow: rgba(255, 255, 255, 0.8) 1px 1px 1px;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: black;
+}
+
+.pagination a:hover, .pagination a:focus {
+    text-decoration: underline;
+}

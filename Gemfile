@@ -27,6 +27,9 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 # Authorization gem by Ryan Bates
 gem 'cancancan', '~> 2.2'
+## PAGINATION Gemfile for Rails 3+, Sinatra, or Merb
+gem 'will_paginate', '~> 3.1.1'
+
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password

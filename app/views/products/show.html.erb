@@ -39,7 +39,9 @@
     </div>
   </div> <!-- /row-->
 
-  <%= render 'comments' %>
+  <%= render 'comments' %><br>
+  
+  <%= will_paginate @comments %><br><br>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %><br><br>
