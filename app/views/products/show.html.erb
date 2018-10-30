@@ -40,9 +40,12 @@
   </div> <!-- /row-->
 
   <%= render 'comments' %><br>
-  
+
   <%= will_paginate @comments %><br><br>
 
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %><br><br>
+<% if can? :update, @product %>
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+<% end %>
+  <%= link_to 'Back', products_path %><br><br>
+
 </section>
