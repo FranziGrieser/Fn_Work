@@ -1,7 +1,7 @@
 <div class="col-sm-10 col-md-4 col-lg-3" id="product_frame">
   <h3 id="productname"><%= link_to product.name, product %></h3>
   <%= image_tag(product.image_url, class: "img-fluid") unless product.image_url.nil? %>
-  <p><%= product.description %></p>
+  <p><%= simple_format(product.description) %></p>
   <p><%= product.color %></p><hr>
   <p><strong><%= product.price %> $</strong></p>
   <p ><%= link_to 'Show', product %><% if can? :update, product %> | <%= link_to 'Edit', edit_product_path(product) %> | <% end %><% if can? :destroy, product %><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></p>
