@@ -52,6 +52,8 @@ group :development, :test do
   # Use RSpec for tests
   gem 'rspec-rails', '~>3.8'
   gem 'rails-controller-testing'
+  # Factory Bot to auto-generate instances of objects for testing
+  gem 'factory_bot_rails', '~> 4.0'
 end
 
 group :development do
