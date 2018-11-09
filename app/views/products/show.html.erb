@@ -19,10 +19,6 @@
         <%= @product.color %>
       </p>
       <p>
-        <strong>Price:</strong><br>
-        <%= @product.price %> $
-      </p>
-      <p>
         <strong>Highest Review: </strong><br>
           <% if @product.comments.length > 0 %>
           <em><q><%= @product.highest_rating_comment.body %></q></em>
@@ -33,10 +29,12 @@
         <div class="rated" data-score="<%= @product.average_rating %>"></div>
       </p>
       <p>
-        <%= form_with(url: '/payments/create') do |form| %>
-          <%= render partial: "shared/stripe_checkout_button" %>
-        <% end %>
+        <strong>Price:</strong><br>
+        <%= @product.price %> $
       </p>
+      <%= form_with(url: '/payments/create') do |form| %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+      <% end %><br><br>
 
     </div> <!-- /col text-->
     <div class="col-sm-12 col-md-6">
