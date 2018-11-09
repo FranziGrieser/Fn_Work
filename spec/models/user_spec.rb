@@ -4,7 +4,8 @@ require 'rails_helper'
     context "User signs up" do
 
       it "is not valid without an email" do
-        expect(User.new(password: "testers")).not_to be_valid
-      end 
+        @user = FactoryBot.build(:user, email: "not_an_email")
+        expect(@user).to_not be_valid
+      end
     end
   end
