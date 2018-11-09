@@ -30,7 +30,7 @@ describe ProductsController, type: :controller do
     end
 
     it 'cannot create product without name' do
-      @product =FactoryBot.build(:product, name: "")
+      @product = FactoryBot.build(:product, name: "")
       expect(@product).not_to be_valid
     end
   end
