@@ -22,4 +22,8 @@ class Product < ApplicationRecord
   def average_rating
     comments.average(:rating).to_f
   end
+
+  def display_price
+    self.price/100.to_f
+  end
 end
