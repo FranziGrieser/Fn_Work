@@ -30,7 +30,7 @@
       </p>
       <p>
         <strong>Price:</strong><br>
-        <%= @product.price %> $
+        <%= @product.display_price %> $
       </p>
       <%= form_with(url: '/payments/create') do |form| %>
           <%= render partial: "shared/stripe_checkout_button" %>

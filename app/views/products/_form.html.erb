@@ -42,7 +42,7 @@
     <div class="field form-group">
       <%= form.label :price %>
       <div class="col sm-10">
-        <%= form.text_field(:price, size: 30, class: "create_input", placeholder: '$') %><br><br>
+        <%= form.text_area(:price, cols: 30, rows: 3, class: "descrip_input", placeholder: 'Type in the price in cents, it will be converted into $ automatically!') %><br><br>
       </div>
     </div>
 
