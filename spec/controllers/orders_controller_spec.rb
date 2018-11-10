@@ -4,7 +4,7 @@ describe OrdersController, type: :controller do
 #  let(:user) {User.create!(email: 'user@testmail.com', password: 'testers')}
 
   before do
-    @user = FactoryBot.build(:user)
+    @user = FactoryBot.create(:user)
   end
 
   context 'unauthenticated user' do

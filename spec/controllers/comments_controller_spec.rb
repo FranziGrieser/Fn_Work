@@ -5,7 +5,7 @@ describe CommentsController, type: :controller do
 #  let(:product) { Product.create!(name: "bike") }
 
 before do
-  @user = FactoryBot.build(:user)
+  @user = FactoryBot.create(:user)
   @product = FactoryBot.create(:product)
 end
 

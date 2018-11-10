@@ -6,7 +6,7 @@ describe Product do
 #    let(:user) {User.create!(email: "karl.meier@web.com", password: "meierei532")}
 
     before do
-      @user = FactoryBot.build(:user)
+      @user = FactoryBot.create(:user)
       @product = FactoryBot.create(:product)
     end
 
