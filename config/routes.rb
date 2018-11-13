@@ -12,11 +12,11 @@ Rails.application.routes.draw do
   get 'simple_pages/contact'
   get 'simple_pages/index'
   get 'simple_pages/landing_page'
-  get 'simple_pages/thank_you'
+  post 'simple_pages/thank_you'
 
   post 'payments/create'
   post 'simple_pages/thank_you'
-  
+
   root 'simple_pages#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
