@@ -10,20 +10,21 @@
       <%= form_with(url:"/simple_pages/thank_you", method: "post", local: true) do |form| %>
         <div class="field form-group">
               <%= form.label :name %>
-            <%= form.text_field :name, size: 30, class: "create_input", placeholder: "Enter Your Name" %><br>
+            <%= form.text_field :name, size: 30, class: "create_input", placeholder: "Enter Your Name", required: true %><br>
         </div>
         <div class="field form-group">
             <%= form.label :email %>
-            <%= form.text_field :email, size: 30, class: "create_input", placeholder: "Enter Your Email" %><br>
+            <%= form.text_field :email, size: 30, class: "create_input", placeholder: "Enter Your Email", required: true %><br>
         </div>
         <div class="field form-group">
             <%= form.label :message %>
-            <%= form.text_area :message, cols: 30, rows: 10, class: "descrip_input", placeholder: "Enter Your Message" %><br><br>
+            <%= form.text_area :message, cols: 30, rows: 10, class: "descrip_input", placeholder: "Enter Your Message", required: true %><br><br>
         </div>
         <div class="actions">
           <%= form.submit "Send", class: "btn btn-light form_label" %>
           <% end %>
-        </div>    </div>
+        </div>
+    </div>
     <div class="col-md-6 col-sm-12">
       <div>
       <p>Or you can call us:<br> <i class="fas fa-phone-square"><br></i> 030 12345 234<br><br>
