@@ -24,7 +24,9 @@ p {
   padding: 10px;
   font-size: 18px;
   line-height: 1.6;
+  text-align: justify;
 }
+
 //* Navbar *//
 .navbar-collapse {
   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
@@ -140,5 +142,7 @@ a:hover {
 //* Footer *//
 .site-footer {
   background-color: #e3f2fd;
-  text-align: center;
+}
+
+#footer {  text-align: center;
 }
