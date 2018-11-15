@@ -7,7 +7,8 @@
          <% if signed_in? && current_user.admin? %>
            <%= link_to ('<span class="far fa-trash-alt"></span>').html_safe, product_comment_path(comment.product, comment), method: :delete, data: { confirm: 'Are you sure?'} %>
          <% end %>
+      </p>
         <div class="rated" data-score="<%= comment.rating %>"></div>
-      <em><q><%= comment.body %></q></em></p>
+      <p><em><q><%= comment.body %></q></em></p>
     </div>
 </div>
