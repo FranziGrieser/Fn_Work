@@ -18,7 +18,7 @@
   padding-top: 10px;
  }
 
-/////* Products Form *////
+/***** Products Form create/ edit****/
 .control-label { text-align: center; }
 
 .field {
@@ -41,6 +41,11 @@
 }
 
 .actions { text-align: center; }
+
+/** Rating **/
+#average-rating { padding-left: 10px; }
+
+.rated { padding-left: 10px; }
 
 /******* Pagination ****/
 .pagination {
