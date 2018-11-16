@@ -37,8 +37,9 @@
       <%= form_with(url: '/payments/create') do |form| %>
           <%= render partial: "shared/stripe_checkout_button" %>
       <% end %><br><br>
-  <% end %>
     </div> <!-- /col text-->
+<% end %>
+
     <div class="col-sm-12 col-md-6">
       <%= render 'new_comment' %>
     </div>
