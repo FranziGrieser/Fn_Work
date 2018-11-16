@@ -2,4 +2,6 @@
   <% @comments.each do |comment| %>
     <%= render comment %>
   <% end %>
+  <%= will_paginate @comments %><br><br>
+
 </div>

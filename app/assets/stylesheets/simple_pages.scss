@@ -7,13 +7,11 @@ body {
   min-height: 100vh;
   margin: 0 auto;
   flex-direction: column;
-  font-family: "Signika Negative", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
+  font-family: "Montserrat", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Tahoma", sans-serif;
   background-color: #F3F9FA;
 }
 
-header {
-  margin-top: 65px;
-}
+h1 { margin-top: 65px; }
 
 h1, h2, h3, h4, h5 {
   color: #009E8D;
@@ -21,18 +19,14 @@ h1, h2, h3, h4, h5 {
  }
 
 p {
-  padding: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
   font-size: 18px;
   line-height: 1.6;
   text-align: justify;
 }
 
 //* Navbar *//
-.navbar-collapse {
-  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
-  padding-left: 10px;
-}
-
 .nav-item {
   font-family: "Syncopate", "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
   padding-top: 12px;
@@ -84,8 +78,6 @@ a:hover {
   background-color: transparent;
 }
 
-.img-responsive { padding-bottom: 10px; }
-
 //* container style and background *//
 .container {
   min-height: 100px;
@@ -99,6 +91,12 @@ a:hover {
   box-shadow: 5px 5px 5px 0;
   padding-bottom: 20px;
 }
+
+
+.img-responsive {
+  margin-top: 0px;
+  padding-bottom: 10px; }
+
 
 //* Carousel  Newcomers *//
 .carousel-caption {
