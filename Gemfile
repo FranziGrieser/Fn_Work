@@ -31,6 +31,8 @@ gem 'cancancan', '~> 2.2'
 gem 'will_paginate', '~> 3.1.1'
 # Stripe for Payment
 gem 'stripe'
+# Dalli - Ruby mamcache client
+gem 'dalli'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
