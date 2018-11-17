@@ -4,6 +4,7 @@
   <%= link_to image_tag(product.image_url, class: "img-fluid"), product unless product.image_url.nil? %>
   <p><%= simple_format(product.description.truncate(75)) %></p>
   <p><strong><%= product.display_price %> $</strong></p>
-  <p ><%= link_to 'See more details', product %><% if can? :update, product %> | <%= link_to 'Edit', edit_product_path(product) %> | <% end %><% if can? :destroy, product %><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></p>
  <% end %>
+  <p ><%= link_to 'See more details', product %><% if can? :update, product %> | <%= link_to 'Edit', edit_product_path(product) %> | <% end %><% if can? :destroy, product %><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %><% end %></p>
+
 </div><!-- /col -->
