@@ -5,7 +5,7 @@
     <strong>Order ID: </strong><%= @order.id %><br>
     <strong>Product Name: </strong><%= @order.product.name %><br>
     <strong>Product Price: </strong><%= number_to_currency(@order.product.display_price) %><br>
-    <strong>Total Price: </strong><%= number_to_currency(@order.total) %>
+    <strong>Total Price: </strong><%= number_to_currency(@order.total/100.to_f) %>
   </p>
   <%= link_to 'Back', orders_path %><br><br>
 </section>

@@ -22,7 +22,10 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     product = @comment.product
     @comment.destroy
-    redirect_to product
+    respond_to do |format|
+      format.html { redirect_to product, alert: 'Your Review was deleted!'}
+      format.json {head :no_content }
+    end
   end
 
   private
