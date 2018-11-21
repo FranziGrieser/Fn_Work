@@ -33,9 +33,11 @@ gem 'will_paginate', '~> 3.1.1'
 gem 'stripe'
 # Dalli - Ruby mamcache client
 gem 'dalli'
+# Redis for Key-pair data-store and caching
+gem 'redis-rails'
 
 # Use Redis adapter to run Action Cable in production
- gem 'redis', '~> 4.0'
+# gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
