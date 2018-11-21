@@ -16,7 +16,11 @@ class UsersController < ApplicationController
 
   # GET /users/new
   def new
-    @user = User.new
+    if current_user.admin?
+      @user = User.new
+    else
+      redirect_to :root, notice: 'The page you tried to reach is for admin only.'
+    end
   end
 
   # GET /users/1/edit
