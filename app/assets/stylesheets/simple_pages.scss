@@ -95,15 +95,16 @@ a:hover {
 
 .img-responsive {
   margin-top: 0px;
-  padding-bottom: 10px; }
+  padding: 10px; }
 
 
 //* Carousel  Newcomers *//
 .carousel-caption {
   position: absolute;
   height: 12%;
-  font-size: 18px;
+  font-size: 20px;
   text-transform: uppercase;
+  font-weight: 800;
 }
 
 .carousel-indicators {
