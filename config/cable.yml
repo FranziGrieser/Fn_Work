@@ -7,5 +7,5 @@ test:
 production:
   adapter: redis
 #  url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
-  url: <%= ENV['DATABASE:URL'] %>
+  url: postgres://lgtbqqxmtwosbj:b720572d9ccd366efc75c2ede5dbb8b08e3eecddcd88146f9e0fd9aa19e2f8f1@ec2-54-235-90-0.compute-1.amazonaws.com:5432/d7skvtqf148h3p
   channel_prefix: bikeberlinfn_production
