@@ -101,4 +101,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.default_url_options= { host: 'bikeberlinfn.herokuapp.com'}
+  # ActionCable
+  config.web_socket_server_url = "wss://bikeberlinfn.herokuapp.com/cable"
+  config.action_cable.allowed_request_origins = ['https://bikeberlinfn.herokuapp.com', 'http://bikeberlinfn.herokuapp.com']
 end
