@@ -8,6 +8,7 @@ class CommentsController < ApplicationController
 
     respond_to do |format|
       if @comment.save
+        ActionCable.server.broadcast 'product_channel', comment: @comment, average_rating: @comment.product.average_rating
         format.html { redirect_to @product, notice: 'Thanks for your Review!' }
         format.json { render :show, status: :created, location: @product }
         format.js
@@ -24,7 +25,7 @@ class CommentsController < ApplicationController
     @comment.destroy
     respond_to do |format|
       format.html { redirect_to product, alert: 'Your Review was deleted!'}
-      format.json {head :no_content }
+      format.json { head :no_content }
     end
   end
 

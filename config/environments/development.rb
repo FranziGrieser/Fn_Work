@@ -59,5 +59,9 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
+  # Show dynamic links/ generate right URLs inside emails form  development
   config.action_mailer.default_url_options = { host: 'localhost:3000' }
+
+  # Generate plain JavaScript files instead of CoffeeScript
+  config.app_generators.javascript_engine = :javascript
 end
