@@ -29,6 +29,7 @@ gem 'devise'
 gem 'cancancan', '~> 2.2'
 ## PAGINATION Gemfile for Rails 3+, Sinatra, or Merb
 gem 'will_paginate', '~> 3.1.1'
+gem 'will_paginate-bootstrap4'
 # Stripe for Payment
 gem 'stripe'
 # Dalli - Ruby mamcache client

@@ -2,6 +2,7 @@
   <% @comments.each do |comment| %>
     <%= render comment %>
   <% end %>
-  <%= will_paginate @comments %><br><br>
-
+  <div>
+  <%= will_paginate @comments, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %><br><br>
+</div>
 </div>
