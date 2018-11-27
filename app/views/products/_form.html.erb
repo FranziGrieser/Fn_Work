@@ -14,35 +14,35 @@
     <div class="field form-group">
       <%= form.label :name %>
       <div class="col sm-10">
-        <%= form.text_field(:name, size: 30, class: "create_input") %><br><br>
+        <%= form.text_field(:name, size: 30, class: "form-control create_input", placeholder: "Name of the product") %><br><br>
       </div>
     </div>
 
     <div class="field form-group">
       <%= form.label :description %>
       <div class="col sm-10">
-        <%= form.text_area(:description, cols: 30, rows: 10, class: 'descrip_input') %><br><br>
+        <%= form.text_area(:description, cols: 30, rows: 10, class: "form-control descrip_input", placeholder: "Write a description for the porduct here.") %><br><br>
       </div>
     </div>
 
     <div class="field form-group">
-      <%= form.label :image_url %>
+      <%= form.label :image_url, "Image URL" %>
       <div class="col sm-10">
-        <%= form.text_field(:image_url, size: 30, class: "create_input") %><br><br>
+        <%= form.text_field(:image_url, size: 30, class: "form-control create_input", placeholder: "Add an image url here.") %><br><br>
       </div>
     </div>
 
     <div class="field form-group">
       <%= form.label :color %>
       <div class="col sm-10">
-        <%= form.text_field(:color, size: 30, class: "create_input") %><br><br>
+        <%= form.text_field(:color, size: 30, class: "form-control create_input", placeholder: "Product's color") %><br><br>
       </div>
     </div>
 
     <div class="field form-group">
       <%= form.label :price %>
       <div class="col sm-10">
-        <%= form.text_area(:price, cols: 30, rows: 3, class: "descrip_input", placeholder: 'Type in the price in cents, it will be converted into $ automatically!') %><br><br>
+        <%= form.text_area(:price, cols: 30, rows: 3, class: "form-control descrip_input", placeholder: "Type in the price in cents, it will be converted into $ automatically!") %><br><br>
       </div>
     </div>
 
