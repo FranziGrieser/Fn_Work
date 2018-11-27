@@ -3,7 +3,7 @@
   <%= form_for([@product, @product.comments.build], remote: true) do |f| %>
     <p class="field form-group">
       <%= f.label :body, "Comments:" %>
-      <%= f.text_area(:body, cols: 25, rows: 5, class: 'descrip_input', placeholder: "Let other people know what you think about it.") %>
+      <%= f.text_area(:body, cols: 25, rows: 5, class: "form-control descrip_input", placeholder: "Let other people know what you think about it.") %>
     </p>
     <div class="field rating"></div>
     <p class="actions">

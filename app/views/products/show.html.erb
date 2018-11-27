@@ -4,7 +4,9 @@
     <div class="row" data-product-id="<%= @product.id %>">
       <div class="col-sm-12 col-md-6">
         <p>
-          <%= image_tag(@product.image_url, class: "img-fluid img-zoom", data_zoom_image: @product.image_url) %>
+          <%= image_tag(@product.image_url,
+            class: "img-fluid img-zoom",
+            data_zoom_image: @product.image_url) %>
         </p>
       </div> <!-- /col image-->
       <div class="col-sm-12 col-md-6">
@@ -34,17 +36,21 @@
             <%= render partial: "shared/stripe_checkout_button" %>
         <% end %><br><br>
       </div> <!-- /col text-->
-  <% end %>
+
       <div class="col-sm-12 col-md-6">
         <%= render 'new_comment' %>
       </div>
     </div> <!-- /row-->
-  <div class="alert alert-info" style="display:none" role="alert">A new comment was posted!</div>
-  <%= render 'comments' %><br>
+    <div class="alert alert-info" style="display:none" role="alert">
+      A new review was posted!</div>
 
-  <% if can? :update, @product %>
-    <%= link_to 'Edit', edit_product_path(@product) %> |
-  <% end %>
-  <%= link_to 'Back', products_path %><br><br>
+    <%= render 'comments' %><br>
 
+    <% if can? :update, @product %>
+      <%= link_to 'Edit', edit_product_path(@product) %> |
+    <% end %>
+
+    <%= link_to 'Back', products_path %><br><br>
+
+  <% end %> <!--/product caching -->
 </section>
