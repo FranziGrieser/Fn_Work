@@ -29,7 +29,7 @@ describe ProductsController, type: :controller do
 
   describe 'GET#new' do
     before do
-      sign_in@user
+      sign_in @user
     end
     it 'redirects to new product page' do
       get :new, params: {id: @product.id}
@@ -39,7 +39,7 @@ describe ProductsController, type: :controller do
 
   describe 'GET#edit' do
     before do
-      sign_in@user
+      sign_in @user
     end
     it 'redirects to edit product page' do
       get :edit, params: {id: @product.id}
@@ -56,7 +56,7 @@ describe ProductsController, type: :controller do
 
   describe 'PATCH#update' do
     before do
-      sign_in@user
+      sign_in @user
       @product = FactoryBot.create(:product)
     end
     it 'updates product' do
@@ -69,7 +69,7 @@ describe ProductsController, type: :controller do
 
   describe 'DELETE#destroy' do
     before do
-      sign_in@user
+      sign_in @user
       @product = FactoryBot.create(:product)
     end
     it 'deletes product' do
