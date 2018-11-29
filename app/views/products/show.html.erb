@@ -47,10 +47,10 @@
       <%= render 'comments' %><br>
     </div>
     <script>
-      $(function(){
-        $('.pagination a').attr('data-remote', 'true')
-      });
-    </script>
+     $(function(){
+       $('.pagination a').attr('data-remote', 'true')
+     });
+   </script>
 
     <% if signed_in? %>
       <%= link_to 'Edit', edit_product_path(@product) %> |
