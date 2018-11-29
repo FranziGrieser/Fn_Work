@@ -43,8 +43,14 @@
     </div> <!-- /row-->
     <div class="alert alert-info" style="display:none" role="alert">
       A new review was posted!</div>
-
-    <%= render 'comments' %><br>
+    <div class="product-reviews">
+      <%= render 'comments' %><br>
+    </div>
+    <script>
+      $(function(){
+        $('.pagination a').attr('data-remote', 'true')
+      });
+    </script>
 
     <% if signed_in? %>
       <%= link_to 'Edit', edit_product_path(@product) %> |

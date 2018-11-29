@@ -1,0 +1,4 @@
+$(".product-reviews").html('<%= escape_javascript(render partial: 'products/comments') %>');
+$('.pagination a').attr('data-remote', 'true');
+$('#average-rating').attr('data-score', "<%= @product.average_rating %>");
+  refreshRating();
