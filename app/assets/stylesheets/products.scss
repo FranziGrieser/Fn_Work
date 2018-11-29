@@ -48,11 +48,7 @@
 .rated { padding-left: 10px; }
 
 /******* Pagination ****/
-.pagination {
-  text-align: center;
-  padding: 1em;
-  cursor: default;
-}
-.pagination a, .pagination span {
-  padding: 0.2em 0.3em;
+.page-item, .page-link {
+  padding: .2rem .3rem;
+  font-size: 18px;
 }
