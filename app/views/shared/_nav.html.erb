@@ -30,7 +30,7 @@
       <li class="nav-item  search">
           <div>
             <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-                <%= form.text_field :q, id: 'q', value: params[:q], class: "search_field", placeholder: "Search for..." %>
+                <%= form.text_field :q, id: 'q', value: params[:q], class: "search_field", placeholder: "Search products for..." %>
                 <%= button_tag(class: "btn btn-primary btn-xs") do %>
                   <i class="fas fa-search"></i>
                 <% end %>
