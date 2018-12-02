@@ -36,6 +36,7 @@
             <%= render partial: "shared/stripe_checkout_button" %>
         <% end %><br><br>
       </div> <!-- /col text-->
+      <% end %> <!--/product caching -->
 
       <div class="col-sm-12 col-md-6">
         <%= render 'new_comment' %>
@@ -53,5 +54,4 @@
     <% end %>
     <%= link_to 'Back', products_path %><br><br>
 
-  <% end %> <!--/product caching -->
 </section>
