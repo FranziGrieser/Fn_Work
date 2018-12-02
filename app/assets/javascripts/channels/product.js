@@ -1,6 +1,10 @@
+$(document).on('turbolinks:load', function() {
+
 App.product = App.cable.subscriptions.create("ProductChannel", {
   connected: function() {
     // Called when the subscription is ready for use on the server
+    App.product.listen_to_comments();
+
   },
 
   disconnected: function() {
@@ -21,6 +25,4 @@ App.product = App.cable.subscriptions.create("ProductChannel", {
   }
 });
 
-$(document).on('turbolinks:load', function() {
-  App.product.listen_to_comments();
 });
