@@ -19,7 +19,7 @@ describe ProductsController, type: :controller do
 
   describe 'POST#create' do
     before do
-      sign_in@user
+      sign_in @user
     end
     it 'creates a new product' do
       @product = FactoryBot.create(:product)
