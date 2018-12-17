@@ -65,7 +65,7 @@ group :development, :test do
   # code coverage analysis tool
   gem 'simplecov', require: false
   # testing stripe
-  gem 'stripe-ruby-mock', '~> 2.5.6', :require => 'stripe_mock'
+  gem 'stripe-ruby-mock', '~> 2.5.6', require: 'stripe_mock'
 end
 
 group :development do
