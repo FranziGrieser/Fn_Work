@@ -1,3 +1,4 @@
   <% @comments.each do |comment| %>
     <%= render comment %>
   <% end %>
+  <%= will_paginate @comments, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, :params => { controller: :products, action: "show" } %><br><br>
