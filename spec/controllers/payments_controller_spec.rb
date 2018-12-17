@@ -1,8 +1,8 @@
 require 'rails_helper'
-require 'stripe-mock'
+require 'stripe_mock'
 
 RSpec.describe PaymentsController, type: :controller do
-   
+
   it "mocks a declined card error" do
   # Prepares an error for the next create charge request
   StripeMock.prepare_card_error(:card_declined)
