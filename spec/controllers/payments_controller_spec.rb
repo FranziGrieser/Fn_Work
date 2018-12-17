@@ -1,17 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe PaymentsController, type: :controller do
-  before do
-    @user = FactoryBot.create(:user)
-    @product = FactoryBot.create(:product)
-  end
-
-  describe 'POST#create' do
-    it "returns http seccess" do
-      get :create
-      expect(response).to be_successful
-    end
-  end
+#  before do
+#    @user = FactoryBot.create(:user)
+#    @product = FactoryBot.create(:product)
+#  end
 
 #  describe 'POST#create' do
 #    before do
