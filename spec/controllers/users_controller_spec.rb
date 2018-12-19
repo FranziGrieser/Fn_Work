@@ -6,6 +6,18 @@ describe UsersController, type: :controller do
   before do
     @user1 = FactoryBot.create(:user)
     @user2 = FactoryBot.create(:user)
+    @admin = FactoryBot.create(:admin)
+  end
+
+  describe 'GET#index' do
+    before do
+      sign_in @user1
+    end
+    it 'renders the user index template' do
+      get :index
+      expect(response).to be_ok
+      expect(response).to render_template('index')
+    end
   end
 
   describe 'GET #show' do
@@ -34,6 +46,30 @@ describe UsersController, type: :controller do
         get :show, params: {id: @user1.id}
         expect(response).to redirect_to(new_user_session_path)
       end
+    end
+  end
+
+  describe 'DELETE#destroy' do
+    before do
+      sign_in @admin
+    end
+
+    it 'admin can delete user' do
+      delete :destroy, params: { id: @user1.id }
+      expect(response).to redirect_to users_url
+    end
+  end
+
+  describe 'PATCH#update' do
+    before do
+      sign_in @user1
+    end
+
+    it 'updates user data' do
+      article_params = FactoryBot.attributes_for(:user)
+      expect { patch :update, params: { id: @user1.id, user: article_params}
+      }.to change(User, :count).by(0)
+      expect(flash[:notice]).to eq 'User was successfully updated.'
     end
   end
 
