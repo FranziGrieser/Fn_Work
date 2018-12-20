@@ -14,26 +14,26 @@
       <img src="./assets/0.10.2/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2018-12-20T08:50:00+01:00">2018-12-20T08:50:00+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2018-12-20T09:05:14+01:00">2018-12-20T09:05:14+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">86.92%</span></span>
+    (<span class="covered_percent"><span class="yellow">87.13%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.72
+         1.71
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>54</b> files in total.
-    <b>497</b> relevant lines. 
-    <span class="green"><b>432</b> lines covered</span> and
+    <b>56</b> files in total.
+    <b>505</b> relevant lines. 
+    <span class="green"><b>440</b> lines covered</span> and
     <span class="red"><b>65</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -49,6 +49,26 @@
       </tr>
     </thead>
     <tbody>
+      
+      <tr>
+        <td class="strong"><a href="#86e0eed9e5aea8ee63873f0946d1136c4c3b91c4" class="src_link" title="app/channels/application_cable/channel.rb">app/channels/application_cable/channel.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>4</td>
+        <td>2</td>
+        <td>2</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
+        <td class="strong"><a href="#fdd959afc9094bd2dc46e1cac282e45ef93fcf7e" class="src_link" title="app/channels/product_channel.rb">app/channels/product_channel.rb</a></td>
+        <td class="red strong">66.67 %</td>
+        <td>13</td>
+        <td>6</td>
+        <td>4</td>
+        <td>2</td>
+        <td>0.7</td>
+      </tr>
       
       <tr>
         <td class="strong"><a href="#a7de706a5a386018d9f8bcc426464c880c502287" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
@@ -202,12 +222,12 @@
       
       <tr>
         <td class="strong"><a href="#d9a27bbab6d146819c2ac8723cd93a18ecc5a8e9" class="src_link" title="app/jobs/comment_update_job.rb">app/jobs/comment_update_job.rb</a></td>
-        <td class="red strong">71.43 %</td>
+        <td class="green strong">100.0 %</td>
         <td>13</td>
         <td>7</td>
-        <td>5</td>
-        <td>2</td>
-        <td>0.7</td>
+        <td>7</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -605,6 +625,146 @@
       </div>
     
       <div class="source_files">
+      
+        <div class="source_table" id="86e0eed9e5aea8ee63873f0946d1136c4c3b91c4">
+  <div class="header">
+    <h3>app/channels/application_cable/channel.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">module ApplicationCable</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  class Channel &lt; ActionCable::Channel::Base</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
+      
+        <div class="source_table" id="fdd959afc9094bd2dc46e1cac282e45ef93fcf7e">
+  <div class="header">
+    <h3>app/channels/product_channel.rb</h3>
+    <h4><span class="red">66.67 %</span> covered</h4>
+    <div>
+      <b>6</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class ProductChannel &lt; ApplicationCable::Channel</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def subscribed</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby">  #  stream_from &quot;product_channel&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="4">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def unsubscribed</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">    # Any cleanup needed when channel is unsubscribed</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def listen(data)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="10">
+          
+          
+          <code class="ruby">    stop_all_streams</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="11">
+          
+          
+          <code class="ruby">    stream_for data[&quot;product_id&quot;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+
       
         <div class="source_table" id="a7de706a5a386018d9f8bcc426464c880c502287">
   <div class="header">
@@ -2712,11 +2872,11 @@
         <div class="source_table" id="d9a27bbab6d146819c2ac8723cd93a18ecc5a8e9">
   <div class="header">
     <h3>app/jobs/comment_update_job.rb</h3>
-    <h4><span class="red">71.43 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>7</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <span class="green"><b>7</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -2747,8 +2907,8 @@
           <code class="ruby">  def perform(comment, current_user)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="5">
-          
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
           
           <code class="ruby">    ProductChannel.broadcast_to(comment.product_id, comment: render_comment(comment, current_user), average_rating: comment.product.average_rating)</code>
         </li>
@@ -2783,8 +2943,8 @@
           <code class="ruby">    def render_comment(comment, current_user)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="11">
-          
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
           
           <code class="ruby">      CommentsController.render(partial: &#39;comments/comment&#39;, locals: { comment: comment, current_user: current_user })</code>
         </li>

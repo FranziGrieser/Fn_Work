@@ -10,6 +10,7 @@ describe ProductsController, type: :controller do
   end
 
   describe 'GET #index' do
+
     it 'renders the products index template' do
       get :index
       expect(response).to be_ok
@@ -18,6 +19,7 @@ describe ProductsController, type: :controller do
   end
 
   describe 'POST #create' do
+
     before do
       sign_in @user
     end
@@ -29,9 +31,11 @@ describe ProductsController, type: :controller do
   end
 
   describe 'GET #new' do
+
     before do
       sign_in @user
     end
+
     it 'redirects to new product page' do
       get :new, params: {id: @product.id}
       expect(response).to be_ok
@@ -50,6 +54,7 @@ describe ProductsController, type: :controller do
   end
 
   describe 'GET #edit' do
+
     before do
       sign_in @user
     end
@@ -68,10 +73,12 @@ describe ProductsController, type: :controller do
   end
 
   describe 'PATCH #update' do
+
     before do
       sign_in @user
       @product = FactoryBot.create(:product)
     end
+
     it 'updates product' do
       article_params = FactoryBot.attributes_for(:product)
       expect{ patch :update, params: {id: @product.id, product: article_params }
@@ -82,10 +89,12 @@ describe ProductsController, type: :controller do
   end
 
   describe 'DELETE #destroy' do
+
     before do
       sign_in @user
       @product = FactoryBot.create(:product)
     end
+    
     it 'deletes product' do
       delete :destroy, params: { id: @product.id }
       expect(response).to redirect_to products_url

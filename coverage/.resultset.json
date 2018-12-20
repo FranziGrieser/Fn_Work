@@ -1466,21 +1466,42 @@
         1,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
         null,
         1,
-        0,
+        1,
         null,
         null
       ],
       "/home/franzi/bikefn/app/jobs/application_job.rb": [
         1,
         null
+      ],
+      "/home/franzi/bikefn/app/channels/product_channel.rb": [
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null
+      ],
+      "/home/franzi/bikefn/app/channels/application_cable/channel.rb": [
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1545292200
+    "timestamp": 1545293114
   }
 }

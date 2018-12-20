@@ -10,9 +10,11 @@ describe UsersController, type: :controller do
   end
 
   describe 'GET #index' do
+
     before do
       sign_in @user1
     end
+
     it 'renders the user index template' do
       get :index
       expect(response).to be_ok
@@ -50,6 +52,7 @@ describe UsersController, type: :controller do
   end
 
   describe 'DELETE #destroy' do
+
     before do
       sign_in @admin
     end
@@ -61,6 +64,7 @@ describe UsersController, type: :controller do
   end
 
   describe 'PATCH #update' do
+
     before do
       sign_in @user1
     end
@@ -83,9 +87,11 @@ describe UsersController, type: :controller do
 
 # doesn't affect codecov
   describe 'POST #create' do
+
     before do
       sign_in @admin
     end
+
     context 'with valid params' do
       it 'redirects to show page' do
         get :show, params: { id: @admin.id }
@@ -103,9 +109,11 @@ describe UsersController, type: :controller do
   end
 
 #  describe 'GET #new' do
+
 #    before do
 #      sign_out @user1
 #    end
+
 #    it 'redirects to #root when not logged in' do
 #      expect(flash[:notice]).to eq 'The page you tried to reach is for admin only.'
 #      expect(response).to redirect_to root_path
