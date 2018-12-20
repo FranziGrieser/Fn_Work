@@ -9,7 +9,7 @@ describe UsersController, type: :controller do
     @admin = FactoryBot.create(:admin)
   end
 
-  describe 'GET#index' do
+  describe 'GET #index' do
     before do
       sign_in @user1
     end
@@ -41,7 +41,7 @@ describe UsersController, type: :controller do
 
     end
 
-    context 'when a user is not logged in' do
+    context 'when a user is logged out' do
       it 'redirects to login' do
         get :show, params: {id: @user1.id}
         expect(response).to redirect_to(new_user_session_path)
@@ -49,18 +49,18 @@ describe UsersController, type: :controller do
     end
   end
 
-  describe 'DELETE#destroy' do
+  describe 'DELETE #destroy' do
     before do
       sign_in @admin
     end
 
-    it 'admin can delete user' do
+    it '#admin? can delete user' do
       delete :destroy, params: { id: @user1.id }
       expect(response).to redirect_to users_url
     end
   end
 
-  describe 'PATCH#update' do
+  describe 'PATCH #update' do
     before do
       sign_in @user1
     end
@@ -71,6 +71,46 @@ describe UsersController, type: :controller do
       }.to change(User, :count).by(0)
       expect(flash[:notice]).to eq 'User was successfully updated.'
     end
+# doesn't affect codecov...
+    context 'with invalid params' do
+      it 're-renders form #edit' do
+        article_params = FactoryBot.attributes_for(:user, email: "")
+        get :edit, params: { id: @user1.id }
+        expect(response).to render_template('edit')
+      end
+    end
   end
+
+# doesn't affect codecov
+  describe 'POST #create' do
+    before do
+      sign_in @admin
+    end
+    context 'with valid params' do
+      it 'redirects to show page' do
+        get :show, params: { id: @admin.id }
+#      expect(flash[:notice]).to eq 'User was successfully created.'
+        expect(response).to render_template('show')
+      end
+    end
+
+    context 'with invalid params' do
+      it 're-renders form #new' do
+        get :new
+        expect(response).to render_template('new')
+      end
+    end
+  end
+
+#  describe 'GET #new' do
+#    before do
+#      sign_out @user1
+#    end
+#    it 'redirects to #root when not logged in' do
+#      expect(flash[:notice]).to eq 'The page you tried to reach is for admin only.'
+#      expect(response).to redirect_to root_path
+#    end
+#  end
+
 
 end
