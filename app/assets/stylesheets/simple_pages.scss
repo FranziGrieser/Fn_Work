@@ -136,6 +136,25 @@ a:hover {
 
 .actions { text-align: center; }
 
+/* Login etc. Form
+@media (min-width: 768px) {
+ .login {
+    width: 100% !important;
+  }
+}
+
+@media (min-width: 992px) {
+  .login {
+    width: 50% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .login {
+    width: 50% !important;
+  }
+}*/
+
 //* Footer *//
 .site-footer {
   background-color: #e3f2fd;
