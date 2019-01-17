@@ -23,11 +23,13 @@
         <%= link_to "Products", products_path %>
       </li>
       <li class="nav-item">
-        <%= link_to orders_path do %>
-          <i class="fas fa-shopping-cart"></i>
-        <% end %>
+        <%= link_to "Orders", orders_path %>
       </li>
-      <li class="nav-item  search">
+      <li class="nav-item">
+        <i class="fas fa-shopping-cart"></i>
+        <%= render 'cart_text' %>
+      </li>
+      <li class="nav-item search">
           <div>
             <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
                 <%= form.text_field :q, id: 'q', value: params[:q], class: "search_field", placeholder: "Search products for..." %>
