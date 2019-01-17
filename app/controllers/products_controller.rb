@@ -5,13 +5,15 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    if params[:q]
-      search_term = params[:q]
-      @products = Product.search(search_term)
+  #  if params[:q]
+  #    search_term = params[:q]
+  #    @products = Product.search(search_term)
       # return our filtered list here
-    else
-      @products = Product.all
-    end
+  #  else
+  #    @products = Product.all
+  #  end
+    @products = Product.all
+    @order_item = current_order.order_items.new
   end
 
   # GET /products/1
