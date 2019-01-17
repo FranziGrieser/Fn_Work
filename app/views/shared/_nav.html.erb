@@ -26,8 +26,8 @@
         <%= link_to "Orders", orders_path %>
       </li>
       <li class="nav-item">
-        <i class="fas fa-shopping-cart"></i>
-        <%= render 'cart_text' %>
+        <!-- <i class="fas fa-shopping-cart"></i> -->
+        <%= link_to "#{current_order.order_items.size} Items & (#{number_to_currency current_order.total} )", cart_path, class: "btn btn-primary btn-xs" %>
       </li>
       <li class="nav-item search">
           <div>

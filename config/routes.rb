@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :order_items, only: [:create, :update, :destroy]
-  get 'carts/show'
+  resource :cart, only: [:show]
 
   devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' }, controllers: { registrations: "user_registrations"}
 
