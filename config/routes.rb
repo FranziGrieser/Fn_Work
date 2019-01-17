@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'order_items/create'
+  get 'order_items/update'
+  get 'order_items/destroy'
+  get 'carts/show'
   devise_for :users, path_names: { sign_in: 'login', sign_out: 'logout' }, controllers: { registrations: "user_registrations"}
   resources :users
 
