@@ -20,14 +20,21 @@ class PaymentsController < ApplicationController
         Order.create(product_id: @product.id, user_id: @user.id, total: @product.price)
         UserMailer.order_confirmation(@user, @email).deliver_now
       end
+      
+      # clear cart after payment
+      @order = current_order
+      @order.order_items.each do |order_item|
+        order_item.destroy
+      end
+
+      redirect_to product_path(@product), notice: "Thank you for your purchase. You'll receive a confirmation E-Mail soon."
 
     rescue Stripe::CardError => e
       # The card had been declined
-      body = e.json_body 
+      body = e.json_body
       err = body[:error]
       flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
     end
-  redirect_to product_path(@product), notice: "Thank you for your purchase. You'll receive a confirmation E-Mail soon."
   end
 
 end

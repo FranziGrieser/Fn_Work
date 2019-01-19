@@ -19,9 +19,10 @@
     </div>
   </div>
   <!-- Pay Button -->
+
   <div>
-    <%= form_tag "/payments/create" do %>
-      <%= render "shared/stripe_checkout_button" %>
+    <%= form_with(url: '/payments/create') do |form| %>
+        <%= render partial: "shared/stripe_checkout_button" %>
     <% end %>
   </div>
 </section>

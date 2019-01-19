@@ -32,12 +32,20 @@
           <strong>Price:</strong><br>
           <%= @product.display_price %> $
         </p>
-        <%= form_with(url: '/payments/create') do |form| %>
-            <%= render partial: "shared/stripe_checkout_button" %>
-        <% end %><br><br>
-      </div> <!-- /col text-->
-      <% end %> <!--/product caching -->
+        <% end %> <!--/product caching -->
 
+        <%= form_for(@order_item, remote: true) do |f| %>
+          <div class="input-group">
+            <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+            <div class="actions">
+              <%= f.hidden_field :product_id, value: product.id %>
+              <%= f.submit "Add to Cart", class: "btn btn-primary" %>
+            </div>
+          </div>
+        <% end %>
+
+      </div> <!-- /col text-->
+<!-- Comments  -->
       <div class="col-sm-12 col-md-6">
         <%= render 'new_comment' %>
       </div>
