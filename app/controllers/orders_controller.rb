@@ -15,8 +15,17 @@ class OrdersController < ApplicationController
   end
 
   def create
+    @order = Order.create(order_params)
   end
 
   def destroy
+    respond_with Order.destroy(params[:id])
+    session[:order_id] = nil
+  end
+
+  private
+  def order_params
+    paramans.require(:order).permit(:total, :user_id)
+
   end
 end
