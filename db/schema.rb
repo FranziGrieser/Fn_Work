@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_01_19_155627) do
+ActiveRecord::Schema.define(version: 2019_01_19_163105) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -43,9 +43,9 @@ ActiveRecord::Schema.define(version: 2019_01_19_155627) do
 
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "product_id"
     t.float "total"
-    t.index ["product_id"], name: "index_orders_on_product_id"
+    t.integer "order_status_id"
+    t.index ["order_status_id"], name: "index_orders_on_order_status_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
 
