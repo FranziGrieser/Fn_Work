@@ -5,7 +5,6 @@ class OrderItemsController < ApplicationController
     @order_item = @order.order_items.new(order_item_params)
     @order.save
     session[:order_id] = @order.id
-    redirect_to products_path
   end
 
   def update
@@ -20,7 +19,6 @@ class OrderItemsController < ApplicationController
     @order_item = @order.order_items.find(params[:id])
     @order_item.destroy
     @order_items = @order.order_items
-    redirect_to cart_path
   end
 
   private
