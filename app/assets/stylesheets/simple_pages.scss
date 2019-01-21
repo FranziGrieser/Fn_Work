@@ -97,7 +97,7 @@ a:hover {
   margin-top: 0px;
   padding: 10px; }
 
-
+.top { padding-top: 10px; }
 //* Carousel  Newcomers *//
 .carousel-caption {
   position: absolute;
@@ -160,5 +160,8 @@ a:hover {
   background-color: #e3f2fd;
 }
 
-#footer {  text-align: center;
+#footer {
+  text-align: center;
+  padding-top: 10px;
+
 }
