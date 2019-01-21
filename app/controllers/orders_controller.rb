@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!
+  skip_before_action :authenticate_user!
+
   def index
     if current_user.admin?
       @orders = Order.includes(:product).all
@@ -8,7 +9,7 @@ class OrdersController < ApplicationController
     end  end
 
   def show
-    @order = Order.find(params[:id])
+    @order = Order.find(params[:id]).to_json(:include => [{ :user => { :only => :email }}])
   end
 
   def new
@@ -16,6 +17,7 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.create(order_params)
+    respond_with @order
     session[:order_id] = @order.id
   end
 
@@ -24,9 +26,13 @@ class OrdersController < ApplicationController
     session[:order_id] = nil
   end
 
+  protected
+    def json_request?
+      request.format.json?
+    end
+
   private
   def order_params
-    paramans.require(:order).permit(:total, :user_id)
-
+    params.require(:order).permit(:total, :user_id)
   end
 end
