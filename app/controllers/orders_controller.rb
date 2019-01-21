@@ -16,6 +16,7 @@ class OrdersController < ApplicationController
 
   def create
     @order = Order.create(order_params)
+    session[:order_id] = @order.id
   end
 
   def destroy
