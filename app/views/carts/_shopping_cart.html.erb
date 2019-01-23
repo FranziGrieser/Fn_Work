@@ -11,14 +11,16 @@
   <% end %>
 
   <!-- Cart Items -->
+  <!--  empty cart-->
   <% if @order_items.size == 0 %>
     <p class="text-center top">
       There are no items in your shopping cart. Please go </br>
       <%= link_to 'back to products', products_path %>
     </p>
+  <!--  Cart items-->
   <% else %>
     <% @order_items.each do |order_item| %>
-      <%= render 'cart_row', product: order_item.product, order_item: order_item, show_total: true %>
+      <%= render 'carts/cart_row', product: order_item.product, order_item: order_item, show_total: true %>
     <% end %>
     <%= link_to 'Continue Shopping', products_path %>
 

@@ -1,5 +1,5 @@
 <section class="container back">
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-xs-6 col-sm-6 col-md-6">
       <address><strong>BikeBerlin</strong><br>
         Alexanderplatz 44<br>
@@ -17,9 +17,9 @@
           <%= "Please log in for E-Mail confirmation" %>
         <% end %>
     </div>
-  </div>
-  <!-- Pay Button -->
+  </div> -->
 
+  <!-- Pay Button -->
   <div>
     <%= form_with(url: '/payments/create') do |form| %>
         <%= render partial: "shared/stripe_checkout_button" %>
