@@ -34,7 +34,7 @@
         </p>
         <% end %> <!--/product caching -->
 
-        <%= form_for(order_item_url, remote: true) do |f| %>
+        <%= form_for order_item_url, remote: true do |f| %>
           <div class="input-group">
             <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
             <div class="actions">

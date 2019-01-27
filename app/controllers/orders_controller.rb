@@ -3,9 +3,9 @@ class OrdersController < ApplicationController
 
   def index
     if current_user.admin?
-      @orders = Order.includes(:product).all
+      @orders = Order.includes(:order_items).all
     else
-      @orders = Order.includes(:product, :user).where(user_id: current_user.id)
+      @orders = Order.includes(:order_items, :user).where(user_id: current_user.id)
     end  end
 
   def show
