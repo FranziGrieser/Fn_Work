@@ -1,5 +1,5 @@
 class Product < ApplicationRecord
-  has_many :order_items
+  has_many :order_items, autosave: true
   has_many :comments, dependent: :destroy
 
   validates :name, presence: true

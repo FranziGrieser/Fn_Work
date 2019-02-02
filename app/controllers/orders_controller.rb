@@ -5,8 +5,9 @@ class OrdersController < ApplicationController
     if current_user.admin?
       @orders = Order.includes(:order_items).all
     else
-      @orders = Order.includes(:order_items, :user).where(user_id: current_user.id)
-    end  end
+     @orders = Order.includes(:order_items, :user).where(user_id: current_user.id)
+    end
+  end
 
   def show
     @order = Order.find(params[:id])
