@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 class SimplePagesController < ApplicationController
-  def index
-  end
+  def index; end
 
   def landing_page
     @products = Product.limit(3)

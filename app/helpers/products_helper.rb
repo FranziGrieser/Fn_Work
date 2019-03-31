@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module ProductsHelper
   def cache_key_for_products
     count          = @products

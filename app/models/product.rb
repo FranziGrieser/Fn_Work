@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Product < ApplicationRecord
   has_many :orders
   has_many :comments
@@ -6,9 +8,9 @@ class Product < ApplicationRecord
 
   def self.search(search_term)
     if Rails.env.development?
-      Product.where("name LIKE ?", "%#{search_term}%")
-      else Rails.env.production?
-         Product.where("name ilike ?", "%#{search_term}%")
+      Product.where('name LIKE ?', "%#{search_term}%")
+    else Rails.env.production?
+         Product.where('name ilike ?', "%#{search_term}%")
       end
   end
 
@@ -25,6 +27,6 @@ class Product < ApplicationRecord
   end
 
   def display_price
-    self.price/100.to_f
+    price / 100.to_f
   end
 end

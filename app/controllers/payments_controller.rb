@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class PaymentsController < ApplicationController
   before_action :authenticate_user!
 
@@ -10,24 +12,22 @@ class PaymentsController < ApplicationController
     begin
       charge = Stripe::Charge.create(
         amount: @product.price, # amount in cents
-        currency: "usd",
+        currency: 'usd',
         source: token,
-        description: params[:stripeEmail],
-        #receipt_email: @user.email
+        description: params[:stripeEmail]
+        # receipt_email: @user.email
       )
 
       if charge.paid
         Order.create(product_id: @product.id, user_id: @user.id, total: @product.price)
         UserMailer.order_confirmation(@user, @email).deliver_now
       end
-
     rescue Stripe::CardError => e
       # The card had been declined
-      body = e.json_body 
+      body = e.json_body
       err = body[:error]
       flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
     end
-  redirect_to product_path(@product), notice: "Thank you for your purchase. You'll receive a confirmation E-Mail soon."
+    redirect_to product_path(@product), notice: "Thank you for your purchase. You'll receive a confirmation E-Mail soon."
   end
-
 end
